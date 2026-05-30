@@ -5,7 +5,7 @@ export default function HeroSection() {
         Reduce Waste • Feed People
       </p>
 
-      <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-[#3d2c1e]">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#3d2c1e]">
         Share Extra Food Instead of Throwing It Away.
       </h1>
 

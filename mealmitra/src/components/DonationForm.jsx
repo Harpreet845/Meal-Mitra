@@ -90,7 +90,7 @@ export default function DonationForm() {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+    <div className="bg-white rounded-2xl p-4 md:p-6 border border-gray-200 shadow-sm w-full">
       <h2 className="text-2xl font-semibold mb-5 text-[#3d2c1e]">
         Quick Donation
       </h2>
@@ -128,7 +128,7 @@ export default function DonationForm() {
           <option>Non-Veg</option>
         </select>
 
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-3">
           <input
             type="text"
             name="location"

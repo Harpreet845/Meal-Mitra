@@ -40,8 +40,8 @@ export default function Register({ setActivePage }) {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[#f7f4ef]">
-      <div className="w-full max-w-md bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+    <section className="min-h-screen flex items-center justify-center px-4 bg-[#f7f4ef]">
+      <div className="w-full max-w-sm mx-auto bg-white rounded-3xl p-6 shadow-sm">
         <h2 className="text-3xl font-bold text-[#3d2c1e] mb-6">
           Create Account
         </h2>

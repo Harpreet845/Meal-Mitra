@@ -7,6 +7,7 @@ import Donations from './pages/Donations';
 import MyDonations from './pages/MyDonations';
 import Profile from './pages/Profile';
 import Dashboard from './pages/Dashboard';
+import BottomNav from './components/BottomNav';
 
 export default function App() {
   const token = localStorage.getItem('token');
@@ -16,17 +17,24 @@ export default function App() {
   );
 
   return (
-    <div className="min-h-screen bg-[#f7f4ef]">
-      {activePage !== 'login' && activePage !== 'register' && (
-        <Navbar setActivePage={setActivePage} />
-      )}
+  <>
+    <div className="pb-24">
       {activePage === 'home' && <Home />}
       {activePage === 'donations' && <Donations />}
-      {activePage === 'login' && (<Login setActivePage={setActivePage} />)}
-      {activePage === 'register' && (<Register setActivePage={setActivePage} />)}
+      {activePage === 'login' && (
+        <Login setActivePage={setActivePage} />
+      )}
+      {activePage === 'register' && (
+        <Register setActivePage={setActivePage} />
+      )}
       {activePage === 'mydonations' && <MyDonations />}
       {activePage === 'profile' && <Profile />}
       {activePage === 'dashboard' && <Dashboard />}
     </div>
-  );
+
+    {activePage !== 'login' && activePage !== 'register' && (
+      <BottomNav setActivePage={setActivePage} />
+    )}
+  </>
+  )
 }

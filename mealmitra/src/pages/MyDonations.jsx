@@ -10,7 +10,7 @@ const handleDelete = async (id) => {
 
   try {
     await axios.delete(
-      `http://localhost:5000/api/donations/${id}`
+      `https://mealmitra-backend-t9ub.onrender.com/api/donations/${id}`
     );
 
     window.location.reload();
@@ -29,7 +29,7 @@ export default function MyDonations() {
   const fetchDonations = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:5000/api/donations'
+        'https://mealmitra-backend-t9ub.onrender.com/api/donations'
       );
 
       const user = JSON.parse(

@@ -68,7 +68,7 @@ export default function DonationForm() {
       data.append('image', formData.image);
 
       const response = await axios.post(
-        'http://localhost:5000/api/donations',
+        'https://mealmitra-backend-t9ub.onrender.com/api/donations',
         data
       );
 

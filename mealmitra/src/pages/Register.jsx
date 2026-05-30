@@ -21,7 +21,7 @@ export default function Register({ setActivePage }) {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/register',
+        'https://mealmitra-backend-t9ub.onrender.com/api/auth/register',
         formData
       );
 

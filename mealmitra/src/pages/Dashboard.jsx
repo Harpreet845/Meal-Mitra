@@ -12,7 +12,7 @@ export default function Dashboard() {
   const fetchStats = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:5000/api/donations'
+        'https://mealmitra-backend-t9ub.onrender.com/api/donations'
       );
 
       const donations = response.data;

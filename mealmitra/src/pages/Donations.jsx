@@ -15,7 +15,7 @@ export default function Donations() {
   const fetchDonations = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:5000/api/donations'
+        'https://mealmitra-backend-t9ub.onrender.com/api/donations'
       );
 
       setDonations(response.data);

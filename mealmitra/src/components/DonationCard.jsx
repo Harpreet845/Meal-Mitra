@@ -10,7 +10,7 @@ export default function DonationCard({ item }) {
     }
     try {
       await axios.put(
-        `http://localhost:5000/api/donations/${item._id}/accept`,
+        `https://mealmitra-backend-t9ub.onrender.com/api/donations/${item._id}/accept`,
         {
           acceptedBy: user.name,
           acceptedByEmail: user.email,
@@ -26,7 +26,7 @@ export default function DonationCard({ item }) {
   const handleDeliver = async () => {
   try {
     await axios.put(
-      `http://localhost:5000/api/donations/${item._id}/deliver`
+      `https://mealmitra-backend-t9ub.onrender.com/api/donations/${item._id}/deliver`
     );
 
     alert('Donation delivered successfully!');

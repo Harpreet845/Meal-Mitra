@@ -19,7 +19,7 @@ export default function Login({ setActivePage }) {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'https://mealmitra-backend-t9ub.onrender.com/api/auth/login',
         formData
       );
 

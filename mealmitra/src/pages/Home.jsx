@@ -42,7 +42,7 @@ export default function Home({ setActivePage }) {
   return (
     <div className="min-h-screen bg-[#f8f5f1] flex flex-col items-center px-6 pt-24">
       <h1 className="text-6xl font-bold text-[#3d2c1e] mb-4">
-        MealMitra 🍱 
+        MealMitra  
       </h1>
 
       <p className="text-lg text-gray-600 text-center max-w-xl mb-8">

@@ -17,10 +17,13 @@ export default function App() {
 
   return (
   <>
-  <Navbar
-    activePage={activePage}
-    setActivePage={setActivePage}
-  />
+    {activePage !== 'login' &&
+      activePage !== 'register' && (
+        <Navbar
+          activePage={activePage}
+          setActivePage={setActivePage}
+        />
+      )}
     <div className="min-h-screen">
       {activePage === 'home' && <Home setActivePage={setActivePage}/>}
       {activePage === 'donations' && <Donations />}

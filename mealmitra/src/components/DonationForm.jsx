@@ -90,7 +90,7 @@ export default function DonationForm() {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-4 md:p-6 border border-gray-200 shadow-sm w-full">
+    <div className="bg-[#f4eae2] rounded-2xl p-4 md:p-6 border border-[#e6d7c6] shadow-md w-full">
       <h2 className="text-2xl font-semibold mb-5 text-[#3d2c1e]">
         Donate Food
       </h2>

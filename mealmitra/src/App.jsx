@@ -6,15 +6,14 @@ import Register from './pages/Register';
 import Donations from './pages/Donations';
 import MyDonations from './pages/MyDonations';
 import Profile from './pages/Profile';
-import Dashboard from './pages/Dashboard';
 import DonationForm from './components/DonationForm';
 
 export default function App() {
   const token = localStorage.getItem('token');
-
   const [activePage, setActivePage] = useState(
     token ? 'home' : 'login'
   );
+  console.log("Token =", token);
 
   return (
   <>
@@ -37,7 +36,6 @@ export default function App() {
       )}
       {activePage === 'mydonations' && <MyDonations />}
       {activePage === 'profile' && <Profile />}
-      {activePage === 'dashboard' && <Dashboard />}
     </div>
   </>
   )

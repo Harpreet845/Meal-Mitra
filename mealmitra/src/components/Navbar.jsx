@@ -18,13 +18,6 @@ export default function Navbar({ setActivePage }) {
         </button>
 
         <button
-          onClick={() => setActivePage('dashboard')}
-          className="text-[#3d2c1e] font-medium"
-        >
-          Dashboard
-        </button>
-
-        <button
           onClick={() => setActivePage('donations')}
           className="text-[#3d2c1e] font-medium"
         >

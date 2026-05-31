@@ -17,7 +17,10 @@ export default function App() {
 
   return (
   <>
-  <Navbar setActivePage={setActivePage}/>
+  <Navbar
+    activePage={activePage}
+    setActivePage={setActivePage}
+  />
     <div className="min-h-screen">
       {activePage === 'home' && <Home setActivePage={setActivePage}/>}
       {activePage === 'donations' && <Donations />}
@@ -35,7 +38,9 @@ export default function App() {
         </div>
       )}
       {activePage === 'mydonations' && <MyDonations />}
-      {activePage === 'profile' && <Profile />}
+      {activePage === 'profile' && (
+        <Profile setActivePage={setActivePage} />
+      )}
     </div>
   </>
   )

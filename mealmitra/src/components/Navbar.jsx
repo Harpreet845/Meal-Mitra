@@ -1,4 +1,7 @@
-export default function Navbar({ setActivePage }) {
+export default function Navbar({
+  activePage,
+  setActivePage,
+}) {
   const handleLogout = () => {
     localStorage.removeItem('token');
     setActivePage('login');
@@ -9,47 +12,69 @@ export default function Navbar({ setActivePage }) {
         MealMitra
       </h1>
 
-      <div className="flex flex-wrap justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-0.5">
         <button
           onClick={() => setActivePage('home')}
-          className="text-[#3d2c1e] font-medium"
+          className={`px-1 md:px-2 py-0.5 rounded-md font-medium transition
+            ${
+              activePage === 'home'
+                ? 'bg-[#9b7c65] text-white'
+                : 'text-[#3d2c1e] hover:bg-[#e8d8c4]'
+            }`}
         >
           Home
         </button>
+        <span className="text-[#3d2c1e]/20">|</span>
 
         <button
           onClick={() => setActivePage('donations')}
-          className="text-[#3d2c1e] font-medium"
+          className={`px-1 md:px-2 py-0.5 rounded-md font-medium transition
+            ${
+              activePage === 'donations'
+                ? 'bg-[#9b7c65] text-white'
+                : 'text-[#3d2c1e] hover:bg-[#e8d8c4]'
+            }`}
         >
           Donations
         </button>
+        <span className="text-[#3d2c1e]/20">|</span>
 
         <button
           onClick={() => setActivePage('donate')}
-          className="text-[#3d2c1e] font-medium"
-        > 
+          className={`px-1 md:px-2 py-0.5 rounded-md font-medium transition
+            ${
+              activePage === 'donate'
+                ? 'bg-[#9b7c65] text-white'
+                : 'text-[#3d2c1e] hover:bg-[#e8d8c4]'
+            }`}
+        >
           Donate Food
         </button>
+        <span className="text-[#3d2c1e]/20">|</span>
 
         <button
           onClick={() => setActivePage('mydonations')}
-          className="text-[#3d2c1e] font-medium"
+          className={`px-1 md:px-2 py-0.5 rounded-md font-medium transition
+            ${
+              activePage === 'mydonations'
+                ? 'bg-[#9b7c65] text-white'
+                : 'text-[#3d2c1e] hover:bg-[#e8d8c4]'
+            }`}
         >
           My Donations
         </button>
+        <span className="text-[#3d2c1e]/20">|</span>
 
         <button
           onClick={() => setActivePage('profile')}
-          className="text-[#3d2c1e] font-medium"
+          className={`px-1 md:px-2 py-0.5 rounded-md font-medium transition
+            ${
+              activePage === 'profile'
+                ? 'bg-[#9b7c65] text-white'
+                : 'text-[#3d2c1e] hover:bg-[#e8d8c4]'
+            }`}
         >
           Profile
-        </button>
-
-        <button
-          onClick={handleLogout}
-          className="px-4 py-2 rounded-lg bg-red-500 text-white"
-        >
-          Logout
         </button>
       </div>
     </nav>

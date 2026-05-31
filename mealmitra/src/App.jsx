@@ -7,19 +7,20 @@ import Donations from './pages/Donations';
 import MyDonations from './pages/MyDonations';
 import Profile from './pages/Profile';
 import Dashboard from './pages/Dashboard';
-import BottomNav from './components/BottomNav';
+import DonationForm from './components/DonationForm';
 
 export default function App() {
   const token = localStorage.getItem('token');
 
   const [activePage, setActivePage] = useState(
-    token ? 'donations' : 'login'
+    token ? 'home' : 'login'
   );
 
   return (
   <>
-    <div className="pb-24">
-      {activePage === 'home' && <Home />}
+  <Navbar setActivePage={setActivePage}/>
+    <div className="min-h-screen">
+      {activePage === 'home' && <Home setActivePage={setActivePage}/>}
       {activePage === 'donations' && <Donations />}
       {activePage === 'login' && (
         <Login setActivePage={setActivePage} />
@@ -27,14 +28,17 @@ export default function App() {
       {activePage === 'register' && (
         <Register setActivePage={setActivePage} />
       )}
+      {activePage === 'donate' && (
+        <div className="min-h-screen bg-[#f8f5f1] py-10 px-4">
+          <div className="max-w-3xl mx-auto">
+            <DonationForm />
+          </div>
+        </div>
+      )}
       {activePage === 'mydonations' && <MyDonations />}
       {activePage === 'profile' && <Profile />}
       {activePage === 'dashboard' && <Dashboard />}
     </div>
-
-    {activePage !== 'login' && activePage !== 'register' && (
-      <BottomNav setActivePage={setActivePage} />
-    )}
   </>
   )
 }

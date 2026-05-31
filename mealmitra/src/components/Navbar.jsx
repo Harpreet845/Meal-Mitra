@@ -32,6 +32,13 @@ export default function Navbar({ setActivePage }) {
         </button>
 
         <button
+          onClick={() => setActivePage('donate')}
+          className="text-[#3d2c1e] font-medium"
+        > 
+          Donate Food
+        </button>
+
+        <button
           onClick={() => setActivePage('mydonations')}
           className="text-[#3d2c1e] font-medium"
         >

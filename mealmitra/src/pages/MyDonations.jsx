@@ -47,7 +47,7 @@ export default function MyDonations() {
   };
 
   return (
-    <div className="p-6">
+    <div className="min-h-screen p-6 bg-gradient-to-b from-[#f8f5f1] to-[#efe6dd]">
       <h1 className="text-[#3d2c1e] text-3xl font-bold mb-6">
         My Donations
       </h1>

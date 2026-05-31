@@ -92,7 +92,7 @@ export default function DonationForm() {
   return (
     <div className="bg-white rounded-2xl p-4 md:p-6 border border-gray-200 shadow-sm w-full">
       <h2 className="text-2xl font-semibold mb-5 text-[#3d2c1e]">
-        Quick Donation
+        Donate Food
       </h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">

@@ -39,7 +39,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="p-6">
+    <div className="min-h-screen p-6 bg-gradient-to-b from-[#f8f5f1] to-[#efe6dd]">
       <h1 className="text-3xl font-bold text-[#3d2c1e] mb-6">
         Dashboard
       </h1>
